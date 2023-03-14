@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name" translatable="false">SudokuSolver</string>
+    <string name="One" translatable="false">1</string>
+    <string name="Two" translatable="false">2</string>
+    <string name="Three" translatable="false">3</string>
+    <string name="Four" translatable="false">4</string>
+    <string name="Five" translatable="false">5</string>
+    <string name="Six" translatable="false">6</string>
+    <string name="Seven" translatable="false">7</string>
+    <string name="Eight" translatable="false">8</string>
+    <string name="Nine" translatable="false">9</string>
+
+    <string name="solve" translatable="false">Solve</string>
+    <string name="clear" translatable="false">Clear</string>
+</resources>

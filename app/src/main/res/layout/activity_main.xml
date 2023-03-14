@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingHorizontal="@dimen/large_margin"
+    tools:context=".MainActivity">
+
+    <com.kiko.sudokusolver.SudokuBoard
+        android:id="@+id/screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin"
+        app:layout_constraintBottom_toTopOf="@id/solveButton"
+        custom:boardColor="@color/black"
+        custom:cellFillColor="@color/cell_fill"
+        custom:cellsHighlightColor="@color/cell_light"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="parent"
+        custom:letterColor="@color/black"
+        custom:letterColorError="@color/error"
+        custom:letterColorSolve="@color/solve">
+
+    </com.kiko.sudokusolver.SudokuBoard>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin"
+        android:orientation="horizontal"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/screen">
+
+        <TextView
+            android:id="@+id/buttonOne"
+            style="@style/Numbers"
+            android:onClick="onClick"
+            android:text="@string/One" />
+
+        <TextView
+            android:id="@+id/buttonTwo"
+            style="@style/Numbers"
+            android:onClick="onClick"
+            android:text="@string/Two" />
+
+        <TextView
+            android:id="@+id/buttonThree"
+            style="@style/Numbers"
+            android:onClick="onClick"
+            android:text="@string/Three" />
+
+        <TextView
+            android:id="@+id/buttonFour"
+            style="@style/Numbers"
+            android:onClick="onClick"
+            android:text="@string/Four" />
+
+        <TextView
+            android:id="@+id/buttonFive"
+            style="@style/Numbers"
+            android:onClick="onClick"
+            android:text="@string/Five" />
+
+        <TextView
+            android:id="@+id/buttonSix"
+            style="@style/Numbers"
+            android:onClick="onClick"
+            android:text="@string/Six" />
+
+        <TextView
+            android:id="@+id/buttonSeven"
+            style="@style/Numbers"
+            android:onClick="onClick"
+            android:text="@string/Seven" />
+
+        <TextView
+            android:id="@+id/buttonEight"
+            style="@style/Numbers"
+            android:onClick="onClick"
+            android:text="@string/Eight" />
+
+        <TextView
+            android:id="@+id/buttonNine"
+            style="@style/Numbers"
+            android:onClick="onClick"
+            android:text="@string/Nine" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/solveButton"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin"
+        android:background="@drawable/solve_btn"
+        android:text="@string/solve"
+        android:textSize="18sp"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/linear" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
