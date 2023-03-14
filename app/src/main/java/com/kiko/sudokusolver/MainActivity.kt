@@ -33,7 +33,12 @@ class MainActivity : AppCompatActivity() {
     private fun solving() {
         solverBtn.setOnClickListener {
             if (solver.isError()) {
-                Toast.makeText(this@MainActivity, "Wrong Input Data", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Wrong input data", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (solver.isAllZero) {
+                Toast.makeText(this@MainActivity, "You have to enter data", Toast.LENGTH_SHORT)
+                    .show()
                 return@setOnClickListener
             }
             if (solverBtn.text.toString() == getString(R.string.solve)) {

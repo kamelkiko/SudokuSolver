@@ -6,7 +6,7 @@ class Solver {
 
     private var selectedRow = -1
     private var selectedColumn = -1
-
+    var isAllZero = false
 
     init {
         clearBoard()
@@ -92,10 +92,12 @@ class Solver {
                 board[r][c] = 0
             }
         }
+        isAllZero = true
         emptyBoxIndex = ArrayList()
     }
 
     fun setNumberPos(num: Int) {
+        isAllZero = false
         if (selectedRow != -1 && selectedColumn != -1) {
             if (board[selectedRow - 1][selectedColumn - 1] == num) {
                 board[selectedRow - 1][selectedColumn - 1] = 0
